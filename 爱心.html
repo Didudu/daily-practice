@@ -1,0 +1,78 @@
+<!--
+ * @Author: Dudu
+ * @Date: 2021-08-14 22:39:02
+ * @LastEditTime: 2021-08-14 23:27:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \小练习\爱心.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: pink;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: #ff0000;
+            /* 使盒子旋转45度 */
+            transform: rotate(45deg) scale(0.85);
+            margin: 100px auto;
+
+            animation: love 1s infinite;
+            margin-bottom: 30px;
+
+            box-shadow: 0 0 10px rgba(255,0,0,.7);
+        }
+        /* 爱心形状 */
+        .box::before ,.box::after{
+            content: " ";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: #ff0000;
+            border-radius: 50%;
+
+            box-shadow: 0 0 10px rgba(255,0,0,.7);
+        }
+        .box::before{
+            left: -40px;
+        } 
+        .box::after{
+            top: -40px;
+        }
+        @keyframes love{
+            0%{
+                transform: rotate(45deg) scale(0.85);
+            }
+            50%{
+                transform: rotate(45deg) scale(1);
+            }
+            100%{
+                transform: rotate(45deg) scale(0.85);
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 25px;
+            font-weight: 520;
+            color: rgba(255,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+    <p>爱心</p>
+</body>
+</html>
