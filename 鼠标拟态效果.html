@@ -1,0 +1,147 @@
+<!--
+ * @Author: Dudu
+ * @Date: 2021-11-18 21:23:10
+ * @LastEditTime: 2021-11-18 23:49:37
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \daily-practice\鼠标拟态效果.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标拟态效果</title>
+    <style>
+        *{
+            /* 初始化 取消页面的内外边框 */
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            /* 弹性布局 让页面元素垂直+水平居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #efeeee;
+        }
+        .container{
+            display: flex;
+            /* 让一行中的元素平均分配宽度 */
+            justify-content: space-around;
+            align-items: center;
+            /* 元素在一行放不下时自动换行 */
+            flex-wrap: wrap;
+            width: 700px;
+            height: 600px;
+        }
+        .container .box{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* 让元素垂直排列 这里就是让包含图片中的div和文字垂直排列 */
+            flex-direction: column;
+            width: 100px;
+            height: 140px;
+            margin: 20px;
+            /* 鼠标放上去变小手 */
+            cursor: pointer;
+        }
+        .container .box .img{
+            /* 这里让图片在盒子里垂直+水平居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            /* 圆角属性 */
+            border-radius: 20px;
+            /* 盒子阴影 */
+            box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2), -18px -18px 30px rgba(255, 255, 255, 1);
+            /* 过渡时间 ease-out是指先快速 后慢速 */
+            transition: all 0.2s ease-out;
+        }
+        .container .box .img img{
+            width: 60px;
+            transition: all 0.2s ease-out;
+        }
+        .container .box p{
+            color: slategrey;
+        }
+        .container .box .img:hover{
+            /* inset 是内部阴影 默认是外部阴影outset */
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 18px 18px 30px rgba(0, 0, 0, 0.1),inset -18px -18px 30px rgba(255, 255, 255, 1);
+        }
+        .container .box .img:hover img{
+            width: 58px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.box*15>(.img>img[src="image/$.png"])+p -->
+    <div class="container">
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/1.png" alt=""></div>
+            <p>录音机</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/2.png" alt=""></div>
+            <p>通讯录</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/3.png" alt=""></div>
+            <p>电话</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/4.png" alt=""></div>
+            <p>短信</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/5.png" alt=""></div>
+            <p>浏览器</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/6.png" alt=""></div>
+            <p>相机</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/7.png" alt=""></div>
+            <p>相册</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/8.png" alt=""></div>
+            <p>哔哩哔哩</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/9.png" alt=""></div>
+            <p>日历</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/10.png" alt=""></div>
+            <p>时钟</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/11.png" alt=""></div>
+            <p>Youtube</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/12.png" alt=""></div>
+            <p>Facebook</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/13.png" alt=""></div>
+            <p>微信</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/14.png" alt=""></div>
+            <p>QQ</p>
+        </div>
+        <div class="box">
+            <div class="img"><img src="./picture/鼠标拟态效果/15.png" alt=""></div>
+            <p>微博</p>
+        </div>
+    </div>   
+</body>
+</html>
