@@ -1,0 +1,67 @@
+<!--
+ * @Author: Dudu
+ * @Date: 2021-11-23 20:38:47
+ * @LastEditTime: 2021-11-23 20:48:46
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \daily-practice\垂直手风琴.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直手风琴</title>
+    <link rel="stylesheet" href="css/垂直手风琴.css">
+    <link rel="stylesheet" href="css/垂直手风琴1.css">
+</head>
+<body>
+    <ul class="accordion">
+        <li>
+            <!-- 单选框的id属性值和label 元素的for属性值相同时,就可以通过label
+            元素来选中单选框, 每个单选框都有一个相同name属性 -->
+            <!-- 这个属性主要作用是用来将单选框分类的,当每个name属性值相同时,那么这一组单选框就只能同时选中一个 -->
+            <input type="radio" name="item" id="item1" /><label for="item1"
+                >一级标题1<i class="fa fa-caret-right"></i
+            ></label>
+            <ol>
+                <li>二级标题1</li>
+                <li>二级标题2</li>
+            </ol>
+        </li>
+        <li>
+            <input type="radio" name="item" id="item2" /><label for="item2"
+                >一级标题2<i class="fa fa-caret-right"></i
+            ></label>
+            <ol>
+                <li>二级标题1</li>
+                <li>二级标题2</li>
+                <li>二级标题3</li>
+            </ol>
+        </li>
+        <li>
+            <input type="radio" name="item" id="item3" /><label for="item3"
+                >一级标题3<i class="fa fa-caret-right"></i
+            ></label>
+            <ol>
+                <li>二级标题1</li>
+                <li>二级标题2</li>
+                <li>二级标题3</li>
+                <li>二级标题4</li>
+            </ol>
+        </li>
+        <li>
+            <input type="radio" name="item" id="item4" /><label for="item4"
+                >一级标题4<i class="fa fa-caret-right"></i
+            ></label>
+            <ol>
+                <li>二级标题1</li>
+                <li>二级标题2</li>
+                <li>二级标题3</li>
+                <li>二级标题4</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>
